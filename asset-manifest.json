@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rollit/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/rollit/static/js/main.2ea8904e.chunk.js",
+    "main.js.map": "/rollit/static/js/main.2ea8904e.chunk.js.map",
+    "runtime-main.js": "/rollit/static/js/runtime-main.7ebcd557.js",
+    "runtime-main.js.map": "/rollit/static/js/runtime-main.7ebcd557.js.map",
+    "static/js/2.154d33f0.chunk.js": "/rollit/static/js/2.154d33f0.chunk.js",
+    "static/js/2.154d33f0.chunk.js.map": "/rollit/static/js/2.154d33f0.chunk.js.map",
+    "static/js/3.f1b737a7.chunk.js": "/rollit/static/js/3.f1b737a7.chunk.js",
+    "static/js/3.f1b737a7.chunk.js.map": "/rollit/static/js/3.f1b737a7.chunk.js.map",
+    "index.html": "/rollit/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/rollit/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.154d33f0.chunk.js.LICENSE.txt": "/rollit/static/js/2.154d33f0.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/rollit/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ebcd557.js",
+    "static/js/2.154d33f0.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.2ea8904e.chunk.js"
+  ]
+}
