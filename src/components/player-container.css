@@ -1,0 +1,46 @@
+.player-container{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border: 1px solid transparent;
+
+}
+.player-name,.player-score{
+    font-size: calc(5vw + .5rem);
+    text-transform: uppercase;
+}
+.player-score{
+    font-size: calc(2vw + 1rem);
+}
+.control-btns-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.control-btns-wrap button {
+    background-color: transparent;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid orange;
+    outline: 0;
+    padding: 1vw 3vw;
+    margin: 1vw 3vw;
+    border-radius: .2vw;
+    transition: .3s ease-in-out;
+}
+.control-btns-wrap button:first-child {
+    border: 1px solid salmon;
+}
+.control-btns-wrap button:last-child {
+    border: 1px solid green;
+}
+.control-btns-wrap button:hover {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.control-btns-wrap button:first-child:hover {
+    background-color:salmon;
+}
+.control-btns-wrap button:last-child:hover {
+    background-color:green;
+}

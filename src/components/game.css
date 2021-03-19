@@ -16,10 +16,27 @@
   display: flex;
   flex-direction: column;
 }
+.main-page{
+  height: 100%;
+}
 .players-wrap{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center;
+  height: 80%;
+}
+.back-hp-btn{
+  height: 20%;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+}
+.dices_and_control_btns{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .dices-container{
   display: flex;
@@ -30,6 +47,99 @@
   max-width: 100px;
   height: auto;
 }
+
+.active,.dice-wrap  {
+  transition: .2s ease-in-out;
+  animation: cube .2s ease-in-out;
+}
+
+.dice-wrap i.fas {
+  font-size: 10vw;
+  margin: 1vw;
+}
+/* .fa-dice-one:before,.fa-dice-one,
+.fa-dice-two:before,.fa-dice-two,
+.fa-dice-three:before,.fa-dice-three,
+.fa-dice-four:before,.fa-dice-four,
+.fa-dice-five:before,.fa-dice-five,
+.fa-dice-six:before,.fa-dice-six, */
+.rotate-left{
+  animation: rotate-left 1s ease-in-out ;
+}
+.rotate-right{
+  animation: rotate-right 1s ease-in-out ;
+}
+@keyframes rotate-left{
+    0%{ transform: rotate(0)}
+    100%{ transform: rotate(180deg)}
+}
+@keyframes rotate-right{
+    0%{ transform: rotate(0)}
+    100%{ transform: rotate(-180deg)}
+}
+.dice-wrap:first-child {
+  color: rgb(214, 214, 93);
+}
+.dice-wrap:last-child {
+  color: rgb(211, 48, 48);
+}
 .active{
-  border: 1px solid white;
+  color: pink;
+  text-shadow: 0 0 1vw black;
+  font-size: 200%;
+  position: relative;
+  transform: scale(1.15);
+}
+.active::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1vw;
+  height: 1vw;
+  background-color: red;
+  border-radius: 50%;
+  animation: hover 1.2s ease-in-out infinite;
+}
+
+.loose-msg p{
+  text-align: center;
+  animation: err-msg 1.5s ease-in-out;
+  color: yellow;
+  opacity:0;
+  font-size: 2vw;
+}
+
+@keyframes err-msg {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+@keyframes hover{
+  20%{
+    opacity: 1;
+  }
+  79%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 0;
+  }
+}
+@keyframes cube {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }

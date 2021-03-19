@@ -1,8 +1,9 @@
 import React from 'react';
+import './player-container.css'
 
 const Score = ({scoreType}) => {
     return (
-        <div>
+        <div className="player-score">
             {scoreType}
         </div>
     );
