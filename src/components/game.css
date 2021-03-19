@@ -110,7 +110,18 @@
   opacity:0;
   font-size: 2vw;
 }
-
+.score-wrap,.temp-score-wrap {
+  display: flex;
+  position: relative;
+  height: 100%;
+  place-items: center;
+  justify-content: center;
+  margin: 3vw auto;
+}
+.score-wrap p {
+  font-size: 5vw;
+  font-weight: lighter;
+}
 @keyframes err-msg {
   0%{
     opacity: 1;

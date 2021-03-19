@@ -4,7 +4,7 @@ import './player-container.css'
 const Score = ({scoreType}) => {
     return (
         <div className="player-score">
-            {scoreType}
+            <p>{scoreType}</p>
         </div>
     );
 }

@@ -3,13 +3,25 @@
     flex-direction: column;
     place-items: center;
     border: 1px solid transparent;
-
-}
-.player-name,.player-score{
-    font-size: calc(5vw + .5rem);
-    text-transform: uppercase;
 }
 .player-score{
+    display: flex;
+}
+.player-name,.player-score p{
+    font-size: calc(5vw + .1rem);
+    text-transform: uppercase;
+}
+.fa-bitcoin{
+    font-size: calc(2vw + .1rem);
+    text-transform: uppercase;
+}
+.spin{
+    color: gold;
+    transition: .3s ease-in-out;
+    animation: spin 5s ease-in-out infinite;
+}
+
+.temp-score-wrap p {
     font-size: calc(2vw + 1rem);
 }
 .control-btns-wrap{
@@ -43,4 +55,10 @@
 }
 .control-btns-wrap button:last-child:hover {
     background-color:green;
+}
+
+@keyframes spin {
+    50%{
+        transform: rotateY(1turn);
+    }
 }
