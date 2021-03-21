@@ -63,8 +63,8 @@ export default class Main extends Component {
         this.saveTempScore()
     }
     saveTempScore = () => {
-        let {player1,player2} = this.state
-        if (player1.isPlaying){
+        let {player1,player2,scoreToWin} = this.state
+        if (player1.isPlaying && player1.tempScore <= scoreToWin){
             this.setState(state => ({
                 player1: {
                     ...state.player1,
@@ -72,7 +72,7 @@ export default class Main extends Component {
                 },
             }))
         } 
-        if (player2.isPlaying){
+        if (player2.isPlaying && player2.tempScore <= scoreToWin){
             this.setState(state => ({
                 player2: {
                     ...state.player2,
