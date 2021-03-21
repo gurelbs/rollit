@@ -263,13 +263,13 @@ export default class Main extends Component {
                         <div className="control-btns-wrap">
                             <Button 
                                 name='roll'
-                                cn={'roll-btn'} 
+                                cn={'roll-btn fas fa-dice'} 
                                 click={this.handleRollDice}
                                 disabled={disabled}
                                 />
                             <Button 
                                 name='hold' 
-                                cn={'hold-btn'} 
+                                cn={'hold-btn fas fa-hand-holding-usd'} 
                                 disabled={disabled}
                                 click={this.handleSaveScore}
                             />

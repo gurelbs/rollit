@@ -98,6 +98,11 @@
     transition: .3s ease-in-out;
     font-size: 1vw;
 }
+.control-btns-wrap .roll-btn, .control-btns-wrap .hold-btn{
+    color: gold;
+    text-shadow: 0 0 .2vw black;
+    letter-spacing: .1vw;
+}
 .control-btns-wrap button:first-child {
     border: .2vw solid salmon;
 }
