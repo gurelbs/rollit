@@ -1,8 +1,14 @@
 .player-container{
     display: flex;
+    height: 80%;
+    position: relative;
     flex-direction: column;
     place-items: center;
+    justify-content: space-around;
     border: 1px solid transparent;
+}
+.temp-score-anima{
+    animation: scoreAnima .75s ease-in-out;
 }
 .player-score{
     display: flex;
@@ -15,12 +21,64 @@
     font-size: calc(2vw + .1rem);
     text-transform: uppercase;
 }
+.current-score::before{
+    content: 'current score:';
+    font-size: 1vw;
+    padding: 0 1vw 0 0 ;
+}
+.current-score {
+    padding: 0 .5vw;
+}
+.dollar-icon-wrap,.current-score{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+
+}
+.fa-dollar-sign{
+    color: #333;
+    text-shadow: 0 0 .5vw white;
+    font-size: 2vw;
+}
 .spin{
     color: gold;
     transition: .3s ease-in-out;
     animation: spin 5s ease-in-out infinite;
 }
+.total-score,.temp-score-wrap{
+    box-shadow: 0 0 1vw rgb(36, 36, 36),0 0 .3vw rgb(122, 122, 122);
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    place-items: center;
+    border-radius: .5vw;
+    padding: 5vw 3vw;
+    width: 100%;
+}
+.score-wrap{
+    margin: 3vw 0;
+}
+.total-score::before{
+    position: absolute;
+    top: 0;
+    content: 'total score:';
+    width: 100%;
+    height: 10%;
+    font-size: 1vw;
+    font-weight: bold;
+    border-radius: .5vw .5vw 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.267);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.temp-score-wrap{
+    padding:0;
+    justify-content: center;
 
+}
 .temp-score-wrap p {
     font-size: calc(2vw + 1rem);
 }
@@ -32,18 +90,19 @@
     background-color: transparent;
     text-transform: uppercase;
     color: white;
-    border: 1px solid orange;
+    border: .1vw solid orange;
     outline: 0;
     padding: 1vw 3vw;
     margin: 1vw 3vw;
     border-radius: .2vw;
     transition: .3s ease-in-out;
+    font-size: 1vw;
 }
 .control-btns-wrap button:first-child {
-    border: 1px solid salmon;
+    border: .2vw solid salmon;
 }
 .control-btns-wrap button:last-child {
-    border: 1px solid green;
+    border: .2vw solid rgb(78, 146, 131);
 }
 .control-btns-wrap button:hover {
     color: black;
@@ -52,13 +111,40 @@
 }
 .control-btns-wrap button:first-child:hover {
     background-color:salmon;
+    border: .2vw solid black;
 }
 .control-btns-wrap button:last-child:hover {
-    background-color:green;
+    background-color:rgb(78, 146, 131);
+    border: .2vw solid black;
 }
-
+.totalWin{
+    padding: 1.5vw;
+    text-transform: uppercase;
+}
+.totalWin-color{
+    color: rgb(251, 251, 251);
+    text-shadow: 0 0 .5vw black;
+    font-weight: bold;
+    background-color: rgb(83, 83, 83);
+    padding: .25vw .75vw;
+    border-radius: .7vw;
+}
+.red i{
+    color: red;
+}
 @keyframes spin {
     50%{
         transform: rotateY(1turn);
+    }
+}
+
+@keyframes scoreAnima {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }

@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import './game.css';
 import Cover from './Cover'
 import Main from './Main';
-import Option from './Option'
+import Help from './Help'
 export default class Game extends Component {
   state = { 
     isCoverPage: true,
@@ -46,7 +46,7 @@ export default class Game extends Component {
           />
         : 
         isOptionPage && !isCoverPage 
-        ? <Option optionBtnClick={this.handleOptionBtnClick}/> 
+        ? <Help optionBtnClick={this.handleOptionBtnClick}/> 
         :
         <Main backBtn={this.backToHomePageBtn}/>
         }

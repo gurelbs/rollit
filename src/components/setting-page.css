@@ -1,0 +1,50 @@
+.help-page{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+.help-wrap{
+    height: 100%;
+    justify-content: center;
+}
+.help-page h1 {
+    font-size: 5vw;
+    text-transform: uppercase;
+}
+.help-wrap{
+    background-color:transparent;
+  }
+  .help-wrap h1,.help-wrap h4,.help-wrap p{
+    font-size: 2vw;
+    width: 50%;
+    padding: 2vw;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-shadow: 0 0 .5vw black;
+  }
+  .help-wrap h1{
+    font-size: 5vw;
+    font-weight: bold;
+  }
+  .help-wrap h1,.help-wrap h4{
+    text-transform: uppercase;
+  }
+  .help-wrap a {
+    text-decoration: none;
+  }
+.help-page a {
+    color: aqua;
+}
+.red{
+    color: red;
+}
+footer{
+    position: relative;
+}
+footer a {
+    color: aqua;
+    text-decoration: none;
+} 
